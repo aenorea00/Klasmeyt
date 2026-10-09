@@ -33,7 +33,6 @@ fun CreateEditPostScreen(
     var isInitialized by remember { mutableStateOf(false) }
     var showError by remember { mutableStateOf(false) }
 
-    // Pre-fills fields safely once Room finishes loading
     LaunchedEffect(existingPost) {
         if (isEditMode && existingPost != null && !isInitialized) {
             title = existingPost.title

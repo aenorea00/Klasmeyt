@@ -34,7 +34,6 @@ abstract class KlasmeytDatabase : RoomDatabase() {
             }
         }
 
-        // Populates initial Adamson posts on first launch
         private class DatabaseCallback(
             private val scope: CoroutineScope
         ) : RoomDatabase.Callback() {

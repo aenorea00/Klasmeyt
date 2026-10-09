@@ -105,7 +105,6 @@ fun LoginScreen(
                     if (studentNumber.isBlank() || password.isBlank()) {
                         errorMessage = "Please enter both student number and password."
                     } else {
-                        // Successful login navigates to Feed
                         onLoginSuccess()
                     }
                 },

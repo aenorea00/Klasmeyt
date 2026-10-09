@@ -23,7 +23,6 @@ fun AppNavGraph(
         navController = navController,
         startDestination = Screen.Login.route
     ) {
-        // Screen 0: Login
         composable(route = Screen.Login.route) {
             LoginScreen(
                 onLoginSuccess = {
@@ -34,7 +33,6 @@ fun AppNavGraph(
             )
         }
 
-        // Screen 1: Feed
         composable(route = Screen.Feed.route) {
             FeedScreen(
                 viewModel = feedViewModel,
@@ -50,7 +48,6 @@ fun AppNavGraph(
             )
         }
 
-        // Screen: Profile
         composable(route = Screen.Profile.route) {
             ProfileScreen(
                 viewModel = feedViewModel,
@@ -74,7 +71,6 @@ fun AppNavGraph(
             )
         }
 
-        // Screen 2: Post Detail
         composable(
             route = Screen.PostDetail.route,
             arguments = listOf(navArgument("postId") { type = NavType.StringType })
@@ -90,7 +86,6 @@ fun AppNavGraph(
             )
         }
 
-        // Screen 3 (Create): Create Post
         composable(route = Screen.CreatePost.route) {
             CreateEditPostScreen(
                 postId = null,
@@ -99,7 +94,6 @@ fun AppNavGraph(
             )
         }
 
-        // Screen 3 (Edit): Edit Existing Post
         composable(
             route = Screen.EditPost.route,
             arguments = listOf(navArgument("postId") { type = NavType.StringType })

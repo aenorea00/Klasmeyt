@@ -12,7 +12,6 @@ import kotlinx.coroutines.launch
 
 class FeedViewModel(private val repository: PostRepository) : ViewModel() {
 
-    // Eagerly keeps the Room SQLite connection alive and streaming
     val posts: StateFlow<List<CampusPost>> = repository.allPosts.stateIn(
         scope = viewModelScope,
         started = SharingStarted.Eagerly,

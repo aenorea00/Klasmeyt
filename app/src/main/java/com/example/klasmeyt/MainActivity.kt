@@ -15,10 +15,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        // Access the custom Application instance as discussed in lecture
         val app = application as KlasmeytApplication
 
-        // Initialize ViewModel using the repository from the Application instance
+
         val feedViewModel: FeedViewModel by viewModels {
             FeedViewModelFactory(app.repository)
         }
